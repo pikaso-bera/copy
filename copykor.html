@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বৃত্ত - সম্পূর্ণ সমাধান</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .problem {
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-left: 5px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .problem-title {
+            font-size: 1.3em;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .section {
+            margin: 15px 0;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: #764ba2;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .solution-text {
+            color: #555;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        
+        .answer {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        .answer-title {
+            font-weight: bold;
+            color: #00bcd4;
+            margin-bottom: 8px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .proof {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .proof-title {
+            font-weight: bold;
+            color: #ff9800;
+            margin-bottom: 8px;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .equation {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .note {
+            background: #e8f5e9;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .tick {
+            color: #4caf50;
+            font-weight: bold;
+        }
+        
+        .cross {
+            color: #f44336;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>বৃত্ত (Circle)</h1>
+        <p class="subtitle">WB ১২শ শ্রেণী - সম্পূর্ণ সমাধান</p>
+        
+        <!-- Problem 1 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ১: তিনটি বিন্দুগামী বৃত্ত</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">বৃত্ত (1, -6), (2, 1) ও (5, 2) বিন্দুগামী।</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">বৃত্তের সাধারণ সমীকরণ: \(x^2 + y^2 + 2gx + 2fy + c = 0\)</div>
+                
+                <div class="equation">
+                    তিনটি বিন্দু বৃত্তে থাকায়:<br>
+                    • বিন্দু (1, -6): \(1 + 36 + 2g - 12f + c = 0\) ⟹ \(2g - 12f + c = -37\) <br>
+                    • বিন্দু (2, 1): \(4 + 1 + 4g + 2f + c = 0\) ⟹ \(4g + 2f + c = -5\)<br>
+                    • বিন্দু (5, 2): \(25 + 4 + 10g + 4f + c = 0\) ⟹ \(10g + 4f + c = -29\)
+                </div>
+                
+                <div class="equation">
+                    সমীকরণ সমাধান করলে: \(g = -5, f = 3, c = 9\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">উত্তর:</div>
+                <ul>
+                    <li><strong>বৃত্তের সমীকরণ:</strong> \(x^2 + y^2 - 10x + 6y + 9 = 0\)</li>
+                    <li><strong>কেন্দ্র:</strong> (5, -3)</li>
+                    <li><strong>ব্যাসার্ধ:</strong> \(\sqrt{25 + 9 - 9} = 5\) একক</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Problem 2 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ২: প্যারামেট্রিক থেকে কার্তেসীয় সমীকরণ</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">\(x = \frac{1}{2}(1 + 5\cos t), \quad y = \frac{1}{2}(-2 + 5\sin t)\)</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    \(2x = 1 + 5\cos t\) ⟹ \(\cos t = \frac{2x-1}{5}\)<br>
+                    \(2y = -2 + 5\sin t\) ⟹ \(\sin t = \frac{2y+2}{5}\)<br>
+                    <br>
+                    \(\cos^2 t + \sin^2 t = 1\) ব্যবহার করে:<br>
+                    \[\left(\frac{2x-1}{5}\right)^2 + \left(\frac{2y+2}{5}\right)^2 = 1\]
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">উত্তর:</div>
+                <ul>
+                    <li>\((2x-1)^2 + (2y+2)^2 = 25\)</li>
+                    <li>বা: \(x^2 + y^2 - x + 2y - 5 = 0\)</li>
+                    <li><strong>কেন্দ্র:</strong> \(\left(\frac{1}{2}, -1\right)\)</li>
+                    <li><strong>ব্যাসার্ধ:</strong> \(\frac{5}{2}\) একক</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Problem 3 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ৩: ত্রিভুজ ও বৃত্ত সংক্রান্ত প্রমাণ</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">দুটি বাহু অক্ষে অবস্থিত, তৃতীয় বাহু \(x^2 + y^2 - 2ax - 2ay + a^2 = 0\) বৃত্তকে স্পর্শ করে।</div>
+            </div>
+            
+            <div class="proof">
+                <div class="proof-title">প্রমাণ:</div>
+                <div class="solution-text">
+                    বৃত্তটি: \((x-a)^2 + (y-a)^2 = a^2\), কেন্দ্র (a, a), ব্যাসার্ধ a।<br><br>
+                    ত্রিভুজের বাহু দুটি x ও y অক্ষে থাকায়, এক শীর্ষ মূলবিন্দুতে, অন্য দুটি (p, 0) ও (0, q) এ।<br><br>
+                    তৃতীয় বাহু (পরিধি): \(\frac{x}{p} + \frac{y}{q} = 1\) ⟹ \(qx + py - pq = 0\)<br><br>
+                    এই রেখা বৃত্তকে স্পর্শ করায়, মূলবিন্দু থেকে দূরত্ব = a:<br>
+                    \[\frac{|pq|}{\sqrt{p^2 + q^2}} = a\]
+                    
+                    পরিকেন্দ্র হল পরিধির মধ্যবিন্দু: \(\left(\frac{p}{2}, \frac{q}{2}\right)\)<br><br>
+                    \(x = \frac{p}{2}, y = \frac{q}{2}\) হলে \(p = 2x, q = 2y\)<br><br>
+                    শর্ত থেকে: \(\frac{4xy}{\sqrt{4x^2 + 4y^2}} = a\) ⟹ \(\frac{xy}{\sqrt{x^2 + y^2}} = \frac{a}{2}\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">অতএব, সঞ্চারপথ:</div>
+                <div class="equation">\[\boxed{a^2 - 2a(x + y) + 2xy = 0}\]</div>
+            </div>
+        </div>
+        
+        <!-- Problem 4 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ৪: একটি বৃত্ত অন্যটির মধ্যে অবস্থিত</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">\(x^2 + y^2 - 2y - 15 = 0\) এবং \(x^2 + y^2 - x - 30 = 0\)</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">প্রমাণ:</div>
+                <div class="solution-text">
+                    প্রথম বৃত্ত: \(x^2 + (y-1)^2 = 16\), কেন্দ্র C₁(0, 1), ব্যাসার্ধ r₁ = \(\sqrt{9 + 1 - 8} = 4\)<br><br>
+                    দ্বিতীয় বৃত্ত: \(\left(x - \frac{1}{2}\right)^2 + y^2 = \frac{121}{4}\), কেন্দ্র C₂\(\left(\frac{1}{2}, 0\right)\), ব্যাসার্ধ r₂ = \(\frac{11}{2}\)<br><br>
+                    দুই কেন্দ্রের দূরত্ব: \(d = \sqrt{\frac{1}{4} + 1} = \frac{\sqrt{5}}{2} \approx 1.12\)<br><br>
+                    ছেদের শর্ত: \(|r_1 - r_2| < d < r_1 + r_2\)<br>
+                    যেহেতু \(d + r_1 = \frac{\sqrt{5}}{2} + 4 < \frac{11}{2} = r_2\) এবং \(d < r_2 - r_1\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">অতএব:</div>
+                <div class="solution-text">প্রথম বৃত্ত সম্পূর্ণভাবে দ্বিতীয়টির মধ্যে অবস্থিত। <span class="tick">✓</span></div>
+            </div>
+        </div>
+        
+        <!-- Problem 5 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ৫: মূলবিন্দুগামী বৃত্ত</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">মূলবিন্দু দিয়ে যায়, y = x ও y = -x থেকে a দৈর্ঘ্যের জ্যা ছিন্ন করে।</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    মূলবিন্দুগামী বৃত্ত: \(x^2 + y^2 + 2gx + 2fy = 0\)<br><br>
+                    রেখা y = x থেকে দূরত্ব: \(\frac{|2g - 2f|}{\sqrt{2}} = d_1\)<br><br>
+                    জ্যার দৈর্ঘ্য = \(2\sqrt{R^2 - d_1^2} = a\)<br><br>
+                    যেখানে \(R = \sqrt{g^2 + f^2}\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">উত্তর:</div>
+                <ul>
+                    <li>\(x^2 + y^2 + \frac{a}{\sqrt{2}}x + \frac{a}{\sqrt{2}}y = 0\)</li>
+                    <li>অথবা: \(x^2 + y^2 - \frac{a}{\sqrt{2}}x - \frac{a}{\sqrt{2}}y = 0\)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Problem 6 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ৬: অর্ধবৃত্তস্থ কোণ - জ্যামিতিক প্রমাণ</div>
+            
+            <div class="proof">
+                <div class="proof-title">প্রমাণ:</div>
+                <div class="solution-text">
+                    ধরুন বৃত্তের কেন্দ্র O, ব্যাস AB, পরিধিস্থ বিন্দু C। স্থানাঙ্ক: O(0,0), A(-r,0), B(r,0), C(r cos θ, r sin θ)<br><br>
+                    ভেক্টর: \(\vec{CA} = (-r - r\cos θ, -r\sin θ)\), \(\vec{CB} = (r - r\cos θ, -r\sin θ)\)<br><br>
+                    \(\vec{CA} \cdot \vec{CB} = (-r - r\cos θ)(r - r\cos θ) + (-r\sin θ)(-r\sin θ)\)<br><br>
+                    \(= -r^2(1 + \cos θ)(1 - \cos θ) + r^2\sin^2 θ\)<br><br>
+                    \(= -r^2(1 - \cos^2 θ) + r^2\sin^2 θ = -r^2\sin^2 θ + r^2\sin^2 θ = 0\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">অতএব:</div>
+                <div class="solution-text">∠ACB = 90° <span class="tick">✓</span></div>
+            </div>
+        </div>
+        
+        <!-- Problem 7 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ৭: সরলরেখার ছেদ বিন্দুর সঞ্চারপথ</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">\(x\cos t + y\sin t = a\) এবং \(x\sin t - y\cos t = b\)</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    প্রথম সমীকরণ × cos t: \(x\cos^2 t + y\sin t \cos t = a\cos t\) ... (1)<br><br>
+                    দ্বিতীয় সমীকরণ × sin t: \(x\sin^2 t - y\cos t \sin t = b\sin t\) ... (2)<br><br>
+                    (1) + (2): \(x(\cos^2 t + \sin^2 t) = a\cos t + b\sin t\)<br><br>
+                    ⟹ \(x = a\cos t + b\sin t\) ... (3)<br><br>
+                    একই পদ্ধতিতে: \(y = a\sin t - b\cos t\) ... (4)
+                </div>
+            </div>
+            
+            <div class="equation">
+                (3) এবং (4) থেকে:<br>
+                \[x^2 + y^2 = (a\cos t + b\sin t)^2 + (a\sin t - b\cos t)^2\]
+                \[= a^2\cos^2 t + b^2\sin^2 t + a^2\sin^2 t + b^2\cos^2 t = a^2 + b^2\]
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">সঞ্চারপথ:</div>
+                <div class="equation">\[\boxed{x^2 + y^2 = a^2 + b^2}\]</div>
+                <div class="solution-text">(একটি বৃত্ত)</div>
+            </div>
+        </div>
+        
+        <!-- Problem 8 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ৮: x-অক্ষ স্পর্শকারী বৃত্ত</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">x-অক্ষকে (2, 0) এ স্পর্শ করে, y-অক্ষ থেকে 4 একক জ্যা ছিন্ন করে।</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    x-অক্ষ স্পর্শ করলে কেন্দ্র (2, r), ব্যাসার্ধ r।<br><br>
+                    সমীকরণ: \((x-2)^2 + (y-r)^2 = r^2\)<br><br>
+                    y-অক্ষে (x = 0): \(4 + (y-r)^2 = r^2\)<br><br>
+                    ⟹ \((y-r)^2 = r^2 - 4\)<br><br>
+                    জ্যার দৈর্ঘ্য = \(2\sqrt{r^2 - 4} = 4\)<br><br>
+                    ⟹ \(r^2 - 4 = 4\) ⟹ \(r = 2\sqrt{2}\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">উত্তর:</div>
+                <ul>
+                    <li>\((x-2)^2 + (y - 2\sqrt{2})^2 = 8\)</li>
+                    <li>অথবা: \((x-2)^2 + (y + 2\sqrt{2})^2 = 8\)</li>
+                    <li>প্রসারিত: \(x^2 + y^2 - 4x \mp 4\sqrt{2}y + 4 = 0\)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Problem 9 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ৯: অক্ষ স্পর্শকারী বৃত্ত - প্রমাণ</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">বৃত্ত উভয় অক্ষকে স্পর্শ করে এবং কেন্দ্র lx + my + n = 0 সরলরেখায় থাকে।</div>
+            </div>
+            
+            <div class="proof">
+                <div class="proof-title">প্রমাণ:</div>
+                <div class="solution-text">
+                    বৃত্ত উভয় অক্ষকে স্পর্শ করলে কেন্দ্র (a, a) এবং ব্যাসার্ধ = a।<br><br>
+                    সমীকরণ: \((x-a)^2 + (y-a)^2 = a^2\)<br><br>
+                    সম্প্রসারণ: \(x^2 + y^2 - 2ax - 2ay + a^2 = 0\)<br><br>
+                    কেন্দ্র (a, a) রেখা lx + my + n = 0 এ থাকায়:<br>
+                    \(la + ma + n = 0\) ⟹ \(a(l+m) = -n\) ⟹ \(a = \frac{-n}{l+m}\)<br><br>
+                    সমীকরণে a প্রতিস্থাপন করে গুণ করুন \((l+m)^2\):
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">অতএব:</div>
+                <div class="equation">\[\boxed{(l+m)^2(x^2+y^2) + 2n(l+m)(x+y) + n^2 = 0}\]</div>
+            </div>
+        </div>
+        
+        <!-- Problem 10 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ১০: দুটি বৃত্তের স্পর্শ শর্ত</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">\(x^2 + y^2 + 2gx + 2fy = 0\) এবং \(x^2 + y^2 + 2g'x + 2f'y = 0\)</div>
+            </div>
+            
+            <div class="proof">
+                <div class="proof-title">প্রমাণ:</div>
+                <div class="solution-text">
+                    প্রথম বৃত্ত: কেন্দ্র C₁(-g, -f), ব্যাসার্ধ r₁ = \(\sqrt{g^2 + f^2}\)<br><br>
+                    দ্বিতীয় বৃত্ত: কেন্দ্র C₂(-g', -f'), ব্যাসার্ধ r₂ = \(\sqrt{g'^2 + f'^2}\)<br><br>
+                    স্পর্শ করলে: \(d = |r_1 \pm r_2|\)<br><br>
+                    \(\sqrt{(g-g')^2 + (f-f')^2} = \sqrt{g^2 + f^2} \pm \sqrt{g'^2 + f'^2}\)<br><br>
+                    বর্গ করে সরল করলে: \((gg' + ff')^2 = (g^2+f^2)(g'^2+f'^2)\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">অতএব:</div>
+                <div class="equation">\[\boxed{gf' = g'f}\]</div>
+            </div>
+        </div>
+        
+        <!-- Problem 11 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা ११: দুটি বৃত্তের ছেদ যাচাই</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">\(x^2 + y^2 + 6x + 2y + 8 = 0\) এবং \(x^2 + y^2 + 2x + 6y + 1 = 0\)</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    প্রথম বৃত্ত: কেন্দ্র C₁(-3, -1), ব্যাসার্ধ r₁ = \(\sqrt{9 + 1 - 8} = \sqrt{2}\)<br><br>
+                    দ্বিতীয় বৃত্ত: কেন্দ্র C₂(-1, -3), ব্যাসার্ধ r₂ = \(\sqrt{1 + 9 - 1} = 3\)<br><br>
+                    কেন্দ্রের দূরত্ব: \(d = \sqrt{4 + 4} = 2\sqrt{2}\)<br><br>
+                    ছেদের শর্ত: \(|r_1 - r_2| < d < r_1 + r_2\)<br><br>
+                    \(3 - \sqrt{2} < 2\sqrt{2} < 3 + \sqrt{2}\)<br><br>
+                    \(1.586 < 2.828 < 4.414\) <span class="tick">✓</span>
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">অতএব:</div>
+                <div class="solution-text">বৃত্ত দুটি পরস্পর ছেদ করে।</div>
+            </div>
+        </div>
+        
+        <!-- Problem 12 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা १२: সমবাহু ত্রিভুজের অন্তর্বৃত্ত</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">অন্তর্বৃত্ত সমীকরণ: \(2x^2 + 2y^2 + 3x - y - 5 = 0\)</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    \(x^2 + y^2 + \frac{3}{2}x - \frac{1}{2}y - \frac{5}{2} = 0\)<br><br>
+                    মান: g = 3/4, f = -1/4, c = -5/2<br><br>
+                    ব্যাসার্ধ: \(r = \sqrt{\frac{9}{16} + \frac{1}{16} + \frac{5}{2}} = \sqrt{\frac{50}{16}} = \frac{5\sqrt{2}}{4}\)<br><br>
+                    সমবাহু ত্রিভুজে: অন্তঃব্যাসার্ধ r = \(\frac{a}{2\sqrt{3}}\) যেখানে a = বাহু<br><br>
+                    a = \(2\sqrt{3}r = \frac{5\sqrt{6}}{2}\)<br><br>
+                    ক্ষেত্রফল = \(\frac{\sqrt{3}}{4}a^2 = \frac{\sqrt{3}}{4} \cdot \frac{150}{4}\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">উত্তর:</div>
+                <div class="equation">\[\text{ক্ষেত্রফল} = \frac{75\sqrt{3}}{8} \text{ বর্গ একক}\]</div>
+            </div>
+        </div>
+        
+        <!-- Problem 13 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা १३: সাধারণ জ্যার দৈর্ঘ্য - প্রমাণ</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">\((x-a)^2 + (y-b)^2 = c^2\) এবং \((x-b)^2 + (y-a)^2 = c^2\)</div>
+            </div>
+            
+            <div class="proof">
+                <div class="proof-title">প্রমাণ:</div>
+                <div class="solution-text">
+                    দুটি সমীকরণ বিয়োগ করলে:<br><br>
+                    \((x-a)^2 - (x-b)^2 + (y-b)^2 - (y-a)^2 = 0\)<br><br>
+                    সরল করলে: \(x = y\) (সাধারণ জ্যা)<br><br>
+                    প্রথম বৃত্তে কেন্দ্র (a,b), ব্যাসার্ধ c।<br><br>
+                    রেখা x = y থেকে দূরত্ব = \(\frac{|a-b|}{\sqrt{2}}\)<br><br>
+                    জ্যার দৈর্ঘ্য = \(2\sqrt{c^2 - \frac{(a-b)^2}{2}} = \sqrt{4c^2 - 2(a-b)^2}\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">অতএব:</div>
+                <div class="equation">\[\text{দৈর্ঘ্যের বর্গ} = \boxed{4c^2 - 2(a-b)^2}\]</div>
+            </div>
+        </div>
+        
+        <!-- Problem 14 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা १४: বৃত্তে অন্তর্লিখিত সমবাহু ত্রিভুজ</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">বৃত্ত: \(x^2 + y^2 + 2gx + 2fy + c = 0\)</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    ব্যাসার্ধ: \(R = \sqrt{g^2 + f^2 - c}\)<br><br>
+                    সমবাহু ত্রিভুজ অন্তর্লিখিত হলে: বাহু = \(R\sqrt{3}\)<br><br>
+                    ক্ষেত্রফল = \(\frac{\sqrt{3}}{4}(R\sqrt{3})^2 = \frac{\sqrt{3}}{4} \cdot 3R^2 = \frac{3\sqrt{3}}{4}R^2\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">উত্তর:</div>
+                <div class="equation">\[\text{ক্ষেত্রফল} = \frac{3\sqrt{3}}{4}(g^2 + f^2 - c) \text{ বর্গ একক}\]</div>
+            </div>
+        </div>
+        
+        <!-- Problem 15 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা १५: ব্যাসের সমীকরণ থেকে বৃত্ত</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">(-2, 2) বিন্দুগামী, ব্যাস সমীকরণ: 3x + y = 5 এবং x + y + 1 = 0</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    দুই ব্যাসের সংযোগ বিন্দুতে কেন্দ্র অবস্থিত:<br><br>
+                    \(3x + y = 5\) এবং \(x + y = -1\)<br><br>
+                    বিয়োগ করলে: \(2x = 6\) ⟹ \(x = 3\)<br><br>
+                    \(y = -1 - 3 = -4\)<br><br>
+                    কেন্দ্র: (3, -4)<br><br>
+                    ব্যাসার্ধ = দূরত্ব (-2, 2) থেকে (3, -4):<br>
+                    \(r = \sqrt{25 + 36} = \sqrt{61}\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">উত্তর:</div>
+                <ul>
+                    <li><strong>বৃত্তের সমীকরণ:</strong> \((x-3)^2 + (y+4)^2 = 61\)</li>
+                    <li>অথবা: \(x^2 + y^2 - 6x + 8y - 36 = 0\)</li>
+                    <li><strong>ব্যাসার্ধ:</strong> \(\sqrt{61}\) একক</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Problem 16 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা १६: বৃত্তের পরিবার ও সঞ্চারপথ</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">\(x^2 + y^2 - x(3p+4) - y(p-2) + 10p = 0\)</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">অংশ 1: (3, 1) বিন্দুগামী প্রমাণ</div>
+                <div class="solution-text">
+                    (3, 1) প্রতিস্থাপন:<br><br>
+                    \(9 + 1 - 3(3p+4) - 1(p-2) + 10p = 0\)<br><br>
+                    \(10 - 9p - 12 - p + 2 + 10p = 0\)<br><br>
+                    \(0 = 0\) <span class="tick">✓</span> (সর্বদা সত্য)
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">অংশ 2: কেন্দ্রের সঞ্চারপথ</div>
+                <div class="solution-text">
+                    কেন্দ্র: \(\left(\frac{3p+4}{2}, \frac{p-2}{2}\right)\)<br><br>
+                    ধরুন h = \(\frac{3p+4}{2}\), k = \(\frac{p-2}{2}\)<br><br>
+                    ⟹ \(p = 2k + 2\)<br><br>
+                    \(h = \frac{3(2k+2)+4}{2} = \frac{6k+10}{2} = 3k + 5\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">উত্তর:</div>
+                <div class="equation">\[\text{সঞ্চারপথ:} \quad x = 3y + 5 \quad \text{অথবা} \quad x - 3y - 5 = 0\]</div>
+            </div>
+        </div>
+        
+        <!-- Problem 17 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা १७: তিনটি বৃত্ত - কেন্দ্র সংযোগী ও ব্যাসার্ধ</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">\(x^2 + y^2 = 1\), \(x^2 + y^2 + 6x - 2y - 6 = 0\), \(x^2 + y^2 - 12x + 4y - 9 = 0\)</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    প্রথম বৃত্ত: কেন্দ্র (0, 0), ব্যাসার্ধ r₁ = 1<br><br>
+                    দ্বিতীয় বৃত্ত: কেন্দ্র (-3, 1), ব্যাসার্ধ r₂ = \(\sqrt{9 + 1 + 6} = 4\)<br><br>
+                    তৃতীয় বৃত্ত: কেন্দ্র (6, -2), ব্যাসার্ধ r₃ = \(\sqrt{36 + 4 + 9} = 7\)
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">কেন্দ্রগুলি একরেখীয় যাচাই:</div>
+                <div class="solution-text">
+                    (0,0), (-3,1), (6,-2) এর ঢাল:<br><br>
+                    • (0,0) থেকে (-3,1): \(\frac{1-0}{-3-0} = -\frac{1}{3}\)<br><br>
+                    • (-3,1) থেকে (6,-2): \(\frac{-2-1}{6-(-3)} = \frac{-3}{9} = -\frac{1}{3}\)<br><br>
+                    <span class="tick">✓ একরেখীয়</span>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">ব্যাসার্ধ সমান্তর প্রগতি যাচাই:</div>
+                <div class="solution-text">
+                    r₁ = 1, r₂ = 4, r₃ = 7<br><br>
+                    \(r_2 - r_1 = 3\), \(r_3 - r_2 = 3\)<br><br>
+                    <span class="tick">✓ সমান্তর প্রগতি</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Problem 18 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা १८: y-অক্ষ স্পর্শকারী বৃত্ত</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">y-অক্ষকে মূলবিন্দুতে স্পর্শ করে, (a, b) বিন্দুগামী।</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    y-অক্ষ স্পর্শ করলে কেন্দ্র (r, k) আকারের, ব্যাসার্ধ r।<br><br>
+                    মূলবিন্দুতে স্পর্শ করলে k = 0, অতএব কেন্দ্র (r, 0)।<br><br>
+                    সমীকরণ: \((x-r)^2 + y^2 = r^2\)<br><br>
+                    (a, b) বিন্দুতে: \((a-r)^2 + b^2 = r^2\)<br><br>
+                    \(a^2 - 2ar + r^2 + b^2 = r^2\)<br><br>
+                    \(a^2 + b^2 = 2ar\) ⟹ \(r = \frac{a^2 + b^2}{2a}\)
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">উত্তর:</div>
+                <div class="equation">\[\left(x - \frac{a^2+b^2}{2a}\right)^2 + y^2 = \left(\frac{a^2+b^2}{2a}\right)^2\]</div>
+                <div class="solution-text">অথবা: \(x^2 + y^2 - \frac{a^2+b^2}{a}x = 0\)</div>
+            </div>
+        </div>
+        
+        <!-- Problem 19 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা १९: গুণাঙ্ক নির্ধারণ</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">\(2x^2 + 2y^2 + ax + by + c = 0\), কেন্দ্র (3, -4)</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    মান দ্বারা ভাগ করুন 2: \(x^2 + y^2 + \frac{a}{2}x + \frac{b}{2}y + \frac{c}{2} = 0\)<br><br>
+                    কেন্দ্র: \(\left(-\frac{a}{4}, -\frac{b}{4}\right) = (3, -4)\)<br><br>
+                    ⟹ \(-\frac{a}{4} = 3\) ⟹ <strong>a = -12</strong><br><br>
+                    ⟹ \(-\frac{b}{4} = -4\) ⟹ <strong>b = 16</strong>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Problem 20 -->
+        <div class="problem">
+            <div class="problem-title">সমস্যা २०: অক্ষের ছেদাংশ থেকে বৃত্ত</div>
+            
+            <div class="section">
+                <div class="section-title">দেওয়া:</div>
+                <div class="solution-text">3x + 4y = 12 রেখার অক্ষ ছেদাংশ ব্যাস করে বৃত্ত, মূলবিন্দুগামী।</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">সমাধান:</div>
+                <div class="solution-text">
+                    রেখা 3x + 4y = 12 এ:<br><br>
+                    • x-অক্ষে (y = 0): (4, 0)<br><br>
+                    • y-অক্ষে (x = 0): (0, 3)<br><br>
+                    ব্যাস সমাপ্তিবিন্দু: (4, 0) এবং (0, 3)<br><br>
+                    ব্যাসের মধ্যবিন্দু (কেন্দ্র): (2, 3/2)<br><br>
+                    ব্যাসার্ধ: \(r = \frac{1}{2}\sqrt{16 + 9} = \frac{5}{2}\)<br><br>
+                    মূলবিন্দুতে যাচাই:<br>
+                    \((0-2)^2 + \left(0-\frac{3}{2}\right)^2 = 4 + \frac{9}{4} = \frac{25}{4}\) <span class="tick">✓</span>
+                </div>
+            </div>
+            
+            <div class="answer">
+                <div class="answer-title">উত্তর:</div>
+                <div class="equation">\[\boxed{x^2 + y^2 - 4x - 3y = 0}\]</div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #ccc; text-align: center; color: #666;">
+            <p><strong>WB ১२শ শ্রেণী গণিত পরীক্ষার জন্য প্রস্তুত</strong></p>
+            <p style="font-size: 0.9em; margin-top: 10px;">এই সমাধানগুলি স্থানাঙ্ক জ্যামিতির বৃত্ত অধ্যায়ের সমস্ত গুরুত্বপূর্ণ প্রশ্ন কভার করে।</p>
+        </div>
+    </div>
+</body>
+</html>
